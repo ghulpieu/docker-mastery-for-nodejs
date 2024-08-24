@@ -16,6 +16,7 @@ RUN npm install && npm cache clean --force
 COPY --chown=node:node . .
 
 # tini handles the init process for us
-ENTRYPOINT [ "/sbin/tini", "--" ]
+# note that tini is in docker by default, use --init
+# ENTRYPOINT [ "/sbin/tini", "--" ]
 
 CMD [ "node", "./app.js" ]
