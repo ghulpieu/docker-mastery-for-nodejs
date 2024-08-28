@@ -1,0 +1,20 @@
+services:
+  ts-node-docker:
+    build:
+      context: .
+      args:
+        NODE_ENV: development
+      dockerfile: Dockerfile
+      target: base
+    volumes:
+      - ./src:/home/node/app/src
+      - ./nodemon.json:/home/node/app/nodemon.json
+    container_name: ts-node-docker
+    expose:
+      - '4000'
+    ports:
+      - '4000:4000'
+    environment:
+      - NODE_ENV=development
+      - DEBUG=*:*
+    command: npm run dev

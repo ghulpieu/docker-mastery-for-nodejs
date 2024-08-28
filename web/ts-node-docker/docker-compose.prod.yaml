@@ -1,0 +1,9 @@
+services:
+  ts-node-docker:
+    build:
+      target: production
+      args:
+        NODE_ENV: production
+    environment:
+      - NODE_ENV=production
+    command: node build/index.js
