@@ -5,11 +5,11 @@
             "name": "Attach",
             "type": "node",
             "request": "attach",
-            "port": 5858,
+            "port": 9229,
             "address": "localhost",
             "restart": true,
             "sourceMaps": false,
-            "outDir": null,
+            // "outDir": null,
             "localRoot": "${workspaceRoot}",
             "remoteRoot": "/app",
             "timeout": 10000
